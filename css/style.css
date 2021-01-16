@@ -1,0 +1,219 @@
+
+/******************* VARAIBLES ****************/
+:root{
+    --color-blue-light:#bee3ff;
+    --color-blue-medium:#3cc6c8;
+
+    --color-white:#fefefe;
+    --color-grey:#948a8a;
+
+
+    --font-family-opens:'Open Sans', sans-serif;
+    --font-family-ubuntu:'Ubuntu', sans-serif;
+
+}  
+/******************* BASE  ****************/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    position: relative;
+    font-size:62.5%;
+}
+section{
+    margin-top:5rem;
+    margin-bottom:5rem;
+    padding-left:5rem;
+    padding-right:5rem;
+}
+
+img{
+    width:100%;
+    object-fit: contain;
+}
+
+@media (max-width:800px){
+   
+    section{
+        padding:0rem 2rem;
+    }
+}
+
+
+a:hover,a:link{
+    text-decoration: none;
+}
+
+/******************* UTILITIES ****************/
+.flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.background{
+    background-color:var(--color-blue-light);
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+@media (max-width:600px){
+    .flex{
+        flex-direction:column;
+    }
+    .flex__left{
+        margin-bottom:2rem;
+    }
+}
+
+
+/********************* TYPOGRAPHY **************/
+.heading__primary{
+    font-size:2.5rem;
+    color:var(--color-blue-medium);
+    font-family:var(--font-family-opens);
+    line-height:2.5rem;
+    margin-bottom:1rem;
+}
+.heading__primary--white{
+    color:var(--color-white);
+}
+.para{
+    font-family:var(--font-family-ubuntu);
+    margin-bottom:1rem;
+}
+.para__primary{
+    font-size: 1.2rem;
+    color: var(--color-grey);
+}
+.para__secondary{
+    color:#b3babb;
+    font-size:1rem;
+}
+
+
+/******************* BUTTONS ****************/
+.btn__primary{
+    display: inline-block;
+    color:var(--color-white);
+    padding: 1rem 2rem;
+    background:var(--color-blue-medium);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size:1rem;
+    font-family:var(--font-family-opens);
+    font-weight:770;
+    margin-bottom:1rem;
+}
+
+/***************** HEADER  ****************/
+
+header{
+    position:relative;
+    min-height:100vh;
+    width:100%;
+}
+
+.background--header{
+    /* clip-path: circle(50% at 75% 85%); */
+    clip-path: circle(50% at 95% 63%);    
+    /* clip-path: circle(40.0% at 78% 100%); */
+}
+.navbar{
+    position: absolute;;
+    top:0;
+    width:100%;
+    padding:2rem 5rem;
+    flex-direction:row;
+}
+.logo a{
+    font-size:2rem;
+    color:var(--color-blue-light);
+    font-family:var(--font-family-opens);
+    margin-right:auto;
+}
+.logo a span{
+    font-size:2.2rem;
+    color:var(--color-grey);
+}
+
+.icon>i{
+    font-size: 1.5rem;
+    color: var(--color-blue-medium);
+    margin-right: 1rem;
+    cursor:pointer;
+}
+
+.content{
+    width:100%;
+    position:relative;
+    padding-left:5rem;
+    padding-top:6rem;
+}
+.content__left{
+    max-width:35rem;
+}
+.content__left>h1{
+    font-size:3rem;
+}
+.content__right>img{
+    width:100%;
+}
+
+@media (max-width:600px){
+    .navbar{
+        padding:1rem 2rem;
+    }
+    .content{
+        padding-left:2rem;
+    }
+    .icon>i{
+        margin-right:0.3rem;
+    }
+    .background--header{
+        clip-path: circle(40.0% at 78% 100%);
+    }
+}
+
+/******************* SECTION AUTHOR  ****************/
+
+.author .author__left{
+    flex:0.6;
+}
+.author .author__right {
+    position:relative;
+    left:-10%;
+}
+
+.author .author__right  img{
+    box-shadow:5rem 5rem 0rem var(--color-blue-light);
+}
+  
+/******************* SECTION LEADER  ****************/
+
+.leader .leader__left{
+    position:relative;
+    margin-right:2rem;
+}
+
+/******************* SECTION GOAL  ****************/
+
+.goal img{
+    height:150vh;
+}
+/******************* SECTION REGISTRATION  ****************/
+.registration{
+    padding:3rem 0;
+    background:var(--color-blue-light);
+    margin-bottom:0;
+}
